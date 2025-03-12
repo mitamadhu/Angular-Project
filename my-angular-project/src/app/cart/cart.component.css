@@ -1,0 +1,38 @@
+.cartBox
+{
+    background-color: #fff;
+    padding: 50px 50px;   
+}
+
+.cartBox img 
+{
+    width: 100%;
+}
+
+.priceBox
+{
+    background-color: #fff;
+    padding: 30px 30px;
+}
+
+@media screen and (max-width:600px) {
+    .cartBox img 
+{
+    width: 50%;
+}
+
+}
+.modal-header{
+    z-index: 99;
+    position: relative;
+}
+.modal-body h1{
+    margin-top: -50px;
+    color: rgb(0, 116, 0);
+}
+.modal-tick,.modal-body{
+    margin: 0 auto;
+}
+.modal-tick{
+    margin-top: -40px;
+}
