@@ -1,0 +1,72 @@
+<p>product works!</p>
+
+<div class="container mt-5 mb-5">
+
+    <div class="row categorisBox">
+
+        <div class="col-lg-3 col-6 categorisContent" *ngFor="let data of getCategorisData">
+            <a [routerLink]="['product-page',data.code]">
+                <img src="{{data.img}}">
+                <h4>{{data.name}}</h4>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container mt-3 mb-3">
+
+    <div class="row productBox">
+
+        <p>
+            <a class="float-start link-offset-3" [routerLink]="['/product-page','indoor']">Best of Indoor</a>
+            <a class="float-end" [routerLink]="['/product-page','indoor']"><i
+                    class="bi bi-arrow-right-circle"></i></a>
+        </p>
+
+        <div class="col-lg-3 mt-5" *ngFor="let data of getIndoorProductData;index as i">
+
+            <a [routerLink]="['/product-detail',data.pdCategory,data.pdId]" class="productLink">
+                <div class="productContent" *ngIf="i<=3">
+                    <div class="productImg">
+                        <img src="{{data.pdImg}}">
+                    </div>
+                    <h4>{{data.pdName}}</h4>
+                </div>
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container mt-3 mb-3">
+
+    <div class="row productBox">
+
+        <p>
+            <a class="float-start link-offset-3" [routerLink]="['/product-page','hanging']">Best of Hanging</a>
+            <a class="float-end" [routerLink]="['/product-page','hanging']"><i
+                    class="bi bi-arrow-right-circle"></i></a>
+        </p>
+
+        <div class="col-lg-3 mt-5" *ngFor="let data of getHangingProductData;index as i">
+
+            <a [routerLink]="['/product-detail',data.pdCategory,data.pdId]" class="productLink">
+                <div class="productContent" *ngIf="i<=3">
+                    <div class="productImg">
+                        <img src="{{data.pdImg}}">
+                    </div>
+                    <h4>{{data.pdName}}</h4>
+                </div>
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
